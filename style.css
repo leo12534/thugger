@@ -1,51 +1,88 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
 html {
-    font-size: 10px;
-    background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
-    background-size: cover;
-  }
+	font-size: 62.5%;
+	width: 100%;
+	height: 100%;
+	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
+		center center;
+	background-size: cover;
+	background-color: #6efd70;
+	background-blend-mode: multiply;
+	box-shadow: 20px 20px 30px #2a672b;
 
-  body,html {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
+	/* Flex To Center All things */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-  .keys {
-    display: flex;
-    flex: 1;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-  }
+body {
+	box-sizing: border-box;
+}
 
-  .key {
-    border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    width: 10rem;
-    text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black;
-  }
+body {
+	font-family: sans-serif;
+	font-weight: 400;
+	/* font-size: 16px; */
+	line-height: 1.7;
+	color: #777;
+	padding: 1.5rem;
+}
 
-  .playing {
-    transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
-  }
 
-  kbd {
-    display: block;
-    font-size: 4rem;
-  }
+h1 {
+	font-size:4rem;
+	text-align:center;
+	margin:0;
+	color:white;
+}
 
-  .sound {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    color: #ffc600;
-  }
+
+.keys {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.key {
+	border: 0.4rem solid black;
+	border-radius: 0.5rem;
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem 0.5rem;
+	transition: all 0.07s ease;
+	width: 10rem;
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+	text-shadow: 0 0 0.5rem black;
+}
+
+.playing {
+	transform: scale(1.1);
+	border-color: #6efd70;
+	box-shadow: 0 0 1rem #6efd70;
+}
+
+kbd {
+	display: block;
+	font-size: 4rem;
+}
+
+.sound {
+	font-size: 1.2rem;
+	font-weight:bold;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	color: #91ffbd;
+
+}
