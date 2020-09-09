@@ -4,95 +4,148 @@
 <head>
   <meta charset="UTF-8">
   <title>Thuggy AdLibs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="grid.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="heading">
-    <h1 class="">Young Thug Ad-Libbies</h1>
-  </div>
-
-
-  <div class="row">
-    <div class="keys">
-      <div data-key="65" class="key">
-        <kbd>A</kbd>
-        <span class="sound">Sheesh Sheesh</span>
+  <div class="wrapper">
+    <div class="container">
+      <div class="grid grid-center col-12">
+        <h1>Young Thug Adlibs</h1>
+        <p class="instructions">Press a Key on your keyboard</p>
       </div>
-      <div data-key="83" class="key">
-        <kbd>S</kbd>
-        <span class="sound">hihat</span>
+      <div class="grid keys">
+        <div data-key="81" class="col key">
+          <kbd>Q</kbd>
+          <span class="sound">Ahhh</span>
+        </div>
+        <div data-key="87" class="col key">
+          <kbd>W</kbd>
+          <span class="sound">Ehhh</span>
+        </div>
+        <div data-key="69" class="col key">
+          <kbd>E</kbd>
+          <span class="sound">Harmony 1</span>
+        </div>
+        <div data-key="82" class="col key">
+          <kbd>R</kbd>
+          <span class="sound">Harmony 2</span>
+        </div>
+        <div data-key="84" class="col key">
+          <kbd>T</kbd>
+          <span class="sound">Machine Gun</span>
+        </div>
       </div>
-      <div data-key="68" class="key">
-        <kbd>D</kbd>
-        <span class="sound">kick</span>
+      <div class="grid keys">
+        <div data-key="89" class="col key">
+          <kbd>Y</kbd>
+          <span class="sound">Pew Pew</span>
+        </div>
+        <div data-key="65" class="col key">
+          <kbd>A</kbd>
+          <span class="sound">Sheesh Sheesh 1</span>
+        </div>
+        <div data-key="83" class="col key">
+          <kbd>S</kbd>
+          <span class="sound">Sheesh Sheesh 2</span>
+        </div>
+        <div data-key="68" class="col key">
+          <kbd>D</kbd>
+          <span class="sound">Slatt Long</span>
+        </div>
+        <div data-key="70" class="col key">
+          <kbd>F</kbd>
+          <span class="sound">Slatt Short</span>
+        </div>
       </div>
-      <div data-key="70" class="key">
-        <kbd>F</kbd>
-        <span class="sound">openhat</span>
-      </div>
-      <div data-key="71" class="key">
-        <kbd>G</kbd>
-        <span class="sound">boom</span>
-      </div>
-      <div data-key="72" class="key">
-        <kbd>H</kbd>
-        <span class="sound">ride</span>
-      </div>
-      <div data-key="74" class="key">
-        <kbd>J</kbd>
-        <span class="sound">snare</span>
-      </div>
-      <div data-key="75" class="key">
-        <kbd>K</kbd>
-        <span class="sound">tom</span>
-      </div>
-      <div data-key="76" class="key">
-        <kbd>L</kbd>
-        <span class="sound">tink</span>
+      <div class="grid keys">
+        <div data-key="71" class="col key">
+          <kbd>G</kbd>
+          <span class="sound">What</span>
+        </div>
+        <div data-key="72" class="col key">
+          <kbd>H</kbd>
+          <span class="sound">Woo 1</span>
+        </div>
+        <div data-key="74" class="col key">
+          <kbd>J</kbd>
+          <span class="sound">Woo 2</span>
+        </div>
+        <div data-key="75" class="col key">
+          <kbd>K</kbd>
+          <span class="sound">Yah Yah Yah</span>
+        </div>
+        <div data-key="76" class="col key">
+          <kbd>L</kbd>
+          <span class="sound">Yeaow</span>
+        </div>
       </div>
     </div>
-
-
+    <img class="thuggy" src="img/yt-1.png"  alt="">
   </div>
+    <audio data-key="81" src="sounds/yt-ahh.mp3"></audio>
+    <audio data-key="87" src="sounds/yt-ehh.mp3"></audio>
+    <audio data-key="69" src="sounds/yt-harmony-1.mp3"></audio>
+    <audio data-key="82" src="sounds/yt-harmony-2.mp3"></audio>
+    <audio data-key="84" src="sounds/yt-machine-gun.mp3"></audio>
+    <audio data-key="89" src="sounds/yt-pewpew.mp3"></audio>
+    <audio data-key="65" src="sounds/yt-sheesh-1.m4a"></audio>
+    <audio data-key="83" src="sounds/yt-sheesh-2.mp3"></audio>
+    <audio data-key="68" src="sounds/yt-slatt-long.mp3"></audio>
+    <audio data-key="70" src="sounds/yt-slatt-short.mp3"></audio>
+    <audio data-key="71" src="sounds/yt-what.mp3"></audio>
+    <audio data-key="72" src="sounds/yt-woo-1.mp3"></audio>
+    <audio data-key="74" src="sounds/yt-woo-2.mp3"></audio>
+    <audio data-key="75" src="sounds/yt-yah-yah-yah.mp3"></audio>
+    <audio data-key="76" src="sounds/yt-yeaow.mp3"></audio>
 
+    <script>
+      function playAudio(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"`)
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"`)
 
-  <audio data-key="65" src="sounds/sheesh-1.m4a"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+        if (!audio) return
+        audio.currentTime = 0
+        audio.play()
+        key.classList.add('playing')
 
-  </div>
+      }
 
-  <script>
-    function playSound(e) {
-      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
-      console.log(audio)
-      if (!audio) return; // stop the function from running
-      audio.currentTime = 0; // rewind to start
-      audio.play();
-      key.classList.add('playing')
+      // Remove Border Transition
+      function removeTransition(e) {
+        if (e.propertyName !== 'transform') return // skip it if it's not a transform
+        this.classList.remove('playing')
+      }
 
-    }
+      // Showing and hiding Young Thug
+      function activateThuggy(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"`)
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"`)
+        const thuggy = document.querySelector('.thuggy')
 
-    function removeTransition(e) {
-      if (e.propertyName !== 'transform') return // Skip if it's not a transform
-      this.classList.remove('playing')
-    }
+        if (!audio) return
+        thuggy.classList.add('activate-thuggy')
+        setTimeout(() => {
+          thuggy.classList.remove('activate-thuggy')
+        }, 1000);
 
-    const keys = document.querySelectorAll('.key')
-    keys.forEach(key => key.addEventListener('transitionend', removeTransition))
-    window.addEventListener('keydown', playSound)
+      }
 
-  </script>
+      // Remove Border
+      const keys = document.querySelectorAll('.key')
+      keys.forEach(key => key.addEventListener('transitionend', removeTransition))
 
+      // Play The Audio
+      window.addEventListener('keydown', playAudio)
 
+      // Activate Thugger
+      window.addEventListener('keydown', activateThuggy)
+
+    </script>
 </body>
 
 </html>

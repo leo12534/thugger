@@ -8,51 +8,78 @@
 
 html {
 	font-size: 62.5%;
-	width: 100%;
-	height: 100%;
-	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
-		center center;
-	background-size: cover;
-	background-color: #6efd70;
-	background-blend-mode: multiply;
-	box-shadow: 20px 20px 30px #2a672b;
-
-	/* Flex To Center All things */
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 body {
 	box-sizing: border-box;
+	font-family: sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
 }
 
 body {
-	font-family: sans-serif;
-	font-weight: 400;
-	/* font-size: 16px; */
-	line-height: 1.7;
-	color: #777;
-	padding: 1.5rem;
+	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
+		center center;
+	height: 100vh;
+	background-size: cover;
+	background-color: #134315;
+	background-blend-mode: multiply;
+	box-shadow: 20px 20px 30px #2a672b;
 }
 
+.wrapper {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	margin: auto;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	max-width: 80rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 h1 {
-	font-size:4rem;
-	text-align:center;
-	margin:0;
-	color:white;
+	font-size: 10rem;
+	text-align: center;
+	margin: 0;
+
+	font-family: 'Yellowtail', cursive;
+	color: white;
+	letter-spacing: .6rem;;
+
+	-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #6efd70;
+
+}
+
+p.instructions {
+	font-family: 'Kite One', sans-serif;
+
+	color:#fff;
+	font-size:2rem;
+}
+
+@media only screen and (max-width: 768px) {
+	h1 {
+		font-size: 5rem;
+	}
 }
 
 
 .keys {
-	display: flex;
-	flex: 1;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+	margin-top:1rem;
 }
-
 .key {
 	border: 0.4rem solid black;
 	border-radius: 0.5rem;
@@ -67,6 +94,7 @@ h1 {
 	text-shadow: 0 0 0.5rem black;
 }
 
+
 .playing {
 	transform: scale(1.1);
 	border-color: #6efd70;
@@ -80,9 +108,56 @@ kbd {
 
 .sound {
 	font-size: 1.2rem;
-	font-weight:bold;
+	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	color: #91ffbd;
+}
 
+@media only screen and (max-width: 768px) {
+	.sound {
+		font-size: 1rem;
+
+		letter-spacing: 0rem;
+
+	}
+}
+
+/* Young Thug Image + Animation */
+.thuggy {
+	position: absolute;
+	bottom: 0;
+	left: -250px;
+	transition: all 0.07s ease-in-out;
+	width:300px;
+}
+
+@media only screen and (max-width: 768px) {
+	.thuggy {
+		width:230px;
+	}
+}
+
+.activate-thuggy {
+	animation-name: movingThug;
+	animation-duration: 1300ms;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes movingThug {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0.1;
+	}
+
+	50% {
+		transform: translate(250px, 0px);
+		opacity: 0.8;
+	}
+
+	100% {
+		transform: translate(0, 0);
+		opacity: 0.2;
+	}
 }
