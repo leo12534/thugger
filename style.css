@@ -127,14 +127,14 @@ kbd {
 .thuggy {
 	position: absolute;
 	bottom: 0;
-	left: -250px;
+	left: -300px;
 	transition: all 0.07s ease-in-out;
-	width:300px;
+	width:250px;
 }
 
 @media only screen and (max-width: 768px) {
 	.thuggy {
-		width:230px;
+		width:200px;
 	}
 }
 
@@ -152,7 +152,7 @@ kbd {
 	}
 
 	50% {
-		transform: translate(250px, 0px);
+		transform: translate(300px, 0px);
 		opacity: 0.8;
 	}
 
