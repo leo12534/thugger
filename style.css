@@ -38,7 +38,7 @@ html, body { height: 100%; min-height: -webkit-fill-available; }
 .container {
 	position: absolute;
 	width: 100%;
-	max-width: 80rem;
+	max-width: 100rem;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
