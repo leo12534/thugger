@@ -19,7 +19,7 @@ body {
 
 .wrapper {
 	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
-	center center;
+		center center;
 	background-size: cover;
 	background-color: #134315;
 	background-blend-mode: multiply;
@@ -28,6 +28,12 @@ body {
 	height: 100vh;
 	width: 100%;
 	margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.wrapper {
+		height: 80vh;
+	}
 }
 
 .container {
@@ -51,18 +57,17 @@ h1 {
 
 	font-family: 'Yellowtail', cursive;
 	color: white;
-	letter-spacing: .6rem;;
+	letter-spacing: 0.6rem;
 
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #6efd70;
-
 }
 
 p.instructions {
 	font-family: 'Kite One', sans-serif;
-	color:#fff;
-	font-size:2rem;
+	color: #fff;
+	font-size: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -71,9 +76,8 @@ p.instructions {
 	}
 }
 
-
 .keys {
-	margin-top:1rem;
+	margin-top: 1rem;
 }
 .key {
 	border: 0.4rem solid #082509;
@@ -88,7 +92,6 @@ p.instructions {
 	background: rgba(0, 0, 0, 0.4);
 	text-shadow: 0 0 0.5rem black;
 }
-
 
 .playing {
 	transform: scale(1.1);
@@ -114,7 +117,6 @@ kbd {
 		font-size: 1rem;
 
 		letter-spacing: 0rem;
-
 	}
 }
 
@@ -124,12 +126,12 @@ kbd {
 	bottom: 0;
 	left: -300px;
 	transition: all 0.07s ease-in-out;
-	width:250px;
+	width: 250px;
 }
 
 @media only screen and (max-width: 768px) {
 	.thuggy {
-		width:200px;
+		width: 200px;
 	}
 }
 
