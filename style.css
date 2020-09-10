@@ -20,13 +20,7 @@ body {
 	min-height: -webkit-fill-available;
 }
 
-body {
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
-}
-html {
-	height: -webkit-fill-available;
-}
+html, body { height: 100% }
 
 .wrapper {
 	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
