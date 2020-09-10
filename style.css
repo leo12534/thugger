@@ -15,12 +15,11 @@ body {
 	font-family: sans-serif;
 	font-weight: 400;
 	line-height: 1.7;
-	height: 100vh;
-	width: 100vw;
-	min-height: -webkit-fill-available;
+
+
 }
 
-html, body { height: 100% }
+html, body { height: 100%; }
 
 .wrapper {
 	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
@@ -31,14 +30,10 @@ html, body { height: 100% }
 	box-shadow: 20px 20px 30px #2a672b;
 	position: relative;
 	margin: auto;
+	height:100%;
 }
 
-@media only screen and (min-width: 768px) {
-	.wrapper {
-		height: 100vh;
-		min-height: -webkit-fill-available;
-	}
-}
+
 
 .container {
 	position: absolute;
