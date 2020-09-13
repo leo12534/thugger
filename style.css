@@ -15,11 +15,9 @@ body {
 	font-family: sans-serif;
 	font-weight: 400;
 	line-height: 1.7;
-
-
 }
 
-html, body { height: 100%; min-height: -webkit-fill-available; }
+html, body { height: 100%;  min-height: -webkit-fill-available;  }
 
 .wrapper {
 	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
@@ -138,6 +136,7 @@ kbd {
 	animation-duration: 1300ms;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
+	transform:translate(300px);
 }
 
 @keyframes movingThug {

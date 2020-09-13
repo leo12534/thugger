@@ -85,7 +85,9 @@
         </div>
       </div>
     </div>
+
     <img class="thuggy" src="img/yt-1b.png"  alt="">
+
   </div>
     <audio data-key="81" src="sounds/yt-ahh.mp3"></audio>
     <audio data-key="87" src="sounds/yt-ehh.mp3"></audio>
@@ -104,61 +106,68 @@
     <audio data-key="76" src="sounds/yt-yeaow.mp3"></audio>
 
     <script>
-      function playAudio(e) {
-        const audio = document.querySelector(`audio[data-key="${e.keyCode}"`)
-        const key = document.querySelector(`.key[data-key="${e.keyCode}"`)
+      const thuggy = document.querySelector('.thuggy')
+      const keys = document.querySelectorAll('.key')
+      const key = document.querySelector('.key')
 
-        // Play the Song
-        if (!audio) return
+      function playAudioKey(e) {
+        const keyCode = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+
+        // Play The Adlib
+        if (!audio) return;
         audio.currentTime = 0
         audio.play()
-        key.classList.add('playing')
 
-        // Activate The Thuggster
+        // Add Playing Border Class
+        keyCode.classList.add('playing')
+
+        // Activate Thuggy
         activateThuggy()
 
       }
 
-      function clickAudio(e) {
+      function playAudioClick(e) {
+        keys.forEach((key) => {
+          key.addEventListener('click', (function() {
+            const audioKey = key.getAttribute('data-key');
+            const audio = document.querySelector(`audio[data-key="${audioKey}"]`);
 
-        const audioKey = this.getAttribute('data-key');
-        const audio = document.querySelector(`audio[data-key="${ audioKey }"]`);
+            // Play The Adlib
+            if (!audio) return;
+            audio.currentTime = 0;
+            audio.play();
 
-        // Play The Song
-        audio.currentTime = 0;
-        audio.play();
-        this.classList.add('playing');
+            // Add Border Class
+            key.classList.add('playing');
 
-        // Activate The Thuggster
+            // Activate Thuggy
+            activateThuggy()
+          }))
 
-        activateThuggy()
+        })
+      }
+
+      function removeTransition(e) {
+        if (e.propertyName !== 'transform') return
+
+        keys.forEach((key) => {
+          key.classList.remove('playing')
+
+        })
+
       }
 
       function activateThuggy(e) {
-        const thuggy = document.querySelector('.thuggy')
-
         thuggy.classList.add('activate-thuggy')
         setTimeout(() => {
           thuggy.classList.remove('activate-thuggy')
         }, 1000);
-
       }
 
-      // Remove Border Transition
-      function removeTransition(e) {
-        if (e.propertyName !== 'transform') return // skip it if it's not a transform
-        this.classList.remove('playing')
-      }
-
-      // Remove Border
-      const keys = document.querySelectorAll('.key')
-      keys.forEach(key => key.addEventListener('transitionend', removeTransition))
-
-      // Play Audio On click
-      keys.forEach(key => key.addEventListener('click', clickAudio))
-
-      // Play The Audio
-      window.addEventListener('keydown', playAudio)
+      window.addEventListener('keydown', playAudioKey)
+      window.addEventListener('click', playAudioClick)
+      window.addEventListener('transitionend', removeTransition)
 
     </script>
 </body>
