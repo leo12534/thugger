@@ -26,11 +26,12 @@ body {
 	background-color: #134315;
 	background-blend-mode: multiply;
 	box-shadow: 20px 20px 30px #2a672b;
-	min-height: 100vh;
+	min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  	height: calc(var(--vh, 1vh) * 100);
 	/* FLex Shtuff */
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
 .wrapper > * {
@@ -42,6 +43,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-bottom:5rem;
 }
 
 .heading {
