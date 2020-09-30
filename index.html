@@ -117,7 +117,8 @@
     const thuggy = document.querySelector('.thuggy')
     const keys = document.querySelectorAll('.key')
     const key = document.querySelector('.key')
-    const vh = window.innerHeight * 0.01;
+    let vh = window.innerHeight * 0.01;
+
 
     function playAudioKey(e) {
       const keyCode = document.querySelector(`.key[data-key="${e.keyCode}"]`)
@@ -174,10 +175,19 @@
       }, 1000);
     }
 
+    function updateVH() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
     window.addEventListener('keydown', playAudioKey)
     window.addEventListener('click', playAudioClick)
     window.addEventListener('transitionend', removeTransition)
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', updateVH);
+
+
   </script>
 </body>
 
