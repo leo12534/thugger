@@ -17,7 +17,7 @@ body {
 	line-height: 1.7;
 }
 
-html, body { height: 100%;  min-height: -webkit-fill-available;  }
+/*  */
 
 .wrapper {
 	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
@@ -26,81 +26,97 @@ html, body { height: 100%;  min-height: -webkit-fill-available;  }
 	background-color: #134315;
 	background-blend-mode: multiply;
 	box-shadow: 20px 20px 30px #2a672b;
-	position: relative;
-	margin: auto;
-	height:100%;
+	min-height: 100vh;
+	/* FLex Shtuff */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
-
-
-.container {
-	position: absolute;
-	width: 100%;
-	max-width: 100rem;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
+.wrapper > * {
+	order: 9999;
 }
 
-h1 {
-	font-size: 10rem;
+/* Header */
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+}
+
+.heading span {
+	font-size: 60px;
+	padding: 15px;
+}
+
+.heading h1 {
+	display: flex;
 	text-align: center;
-	margin: 0;
+}
 
+.header h1 {
+	font-size: 10rem;
+	margin: 0;
 	font-family: 'Yellowtail', cursive;
 	color: white;
-	letter-spacing: 0.6rem;
+	letter-spacing: 0.5rem;
 
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #6efd70;
+	-webkit-text-stroke-color: #6efd70b2;
 }
 
-p.instructions {
+.header p.instructions {
 	font-family: 'Kite One', sans-serif;
 	color: #fff;
 	font-size: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
-	h1 {
+	.header h1 {
 		font-size: 5rem;
 	}
 }
 
-.keys {
-	margin-top: 1rem;
+/* Content Section */
+
+.content .keys {
+	display: flex;
+	flex-wrap: wrap;
 }
-.key {
+
+.content .key {
 	border: 0.4rem solid #082509;
 	border-radius: 0.5rem;
-	margin: 1rem;
 	font-size: 1.5rem;
 	padding: 1rem 0.5rem;
 	transition: all 0.07s ease;
-	width: 10rem;
 	text-align: center;
 	color: white;
 	background: rgba(0, 0, 0, 0.4);
 	text-shadow: 0 0 0.5rem black;
+	margin: 5px;
+	/* FLex Shtuff */
+	flex: 1 1 calc(20% - 10px);
 }
 
-.playing {
+.content .playing {
 	transform: scale(1.1);
 	border-color: #6efd70;
 	box-shadow: 0 0 1rem #6efd70;
 }
 
-kbd {
+.content kbd {
 	display: block;
 	font-size: 4rem;
 }
 
-.sound {
+.content .sound {
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -109,7 +125,7 @@ kbd {
 }
 
 @media only screen and (max-width: 768px) {
-	.sound {
+	.content .sound {
 		font-size: 1rem;
 
 		letter-spacing: 0rem;
@@ -136,7 +152,7 @@ kbd {
 	animation-duration: 1300ms;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	transform:translate(300px);
+	transform: translate(300px);
 }
 
 @keyframes movingThug {
