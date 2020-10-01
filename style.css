@@ -103,6 +103,7 @@ body {
 	background: rgba(0, 0, 0, 0.4);
 	text-shadow: 0 0 0.5rem black;
 	margin: 5px;
+	cursor: pointer;
 	/* FLex Shtuff */
 	flex: 1 1 calc(20% - 10px);
 }
