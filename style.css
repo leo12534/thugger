@@ -62,6 +62,24 @@ body {
 	font-size: 0.85em;
 }
 
+.wrapper header .instructions a {
+	border-color: #6efd70b2;
+	background: linear-gradient(to top, #6efd70b2 50%, #0000 50%) left top;
+	background-size: 100% 200%;
+	text-decoration: none;
+	color: #6efd70b2;
+	padding: 0 5px;
+	border-radius: 0.15em;
+	transition: all 200ms ease-out;
+}
+
+.wrapper header .instructions a:hover {
+	color: #fff;
+	text-decoration: none;
+	padding: 0 5px;
+	background-position: left bottom;
+}
+
 /* Content Flex Layout */
 .wrapper .content .keys {
 	display: flex;
@@ -85,7 +103,13 @@ body {
 	color: white;
 	background: rgba(0, 0, 0, 0.4);
 	text-shadow: 0 0 0.5em black;
-	cursor: pointer;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+
+.wrapper .content .keys .key:hover {
+  border: 0.25em solid #1fcc25;
+
 }
 
 .wrapper .content .keys .playing {
