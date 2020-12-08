@@ -153,7 +153,11 @@ body {
 
 	.wrapper .content .keys .key {
 		flex: 1 0 20%;
-	}
+  }
+
+  .wrapper .content .keys .sound-label {
+    font-size: 0.85em;
+  }
 
 	.thuggy {
 		width: 250px;
