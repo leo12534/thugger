@@ -1,138 +1,104 @@
+html {
+	box-sizing: border-box;
+}
 *,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
+*:before,
+*:after {
 	box-sizing: inherit;
 }
-
-html {
-	font-size: 62.5%;
-}
-
 body {
-	box-sizing: border-box;
-	font-family: sans-serif;
-	font-weight: 400;
-	line-height: 1.7;
-}
-
-/*  */
-
-.wrapper {
-	background: url(https://static.hiphopdx.com/2018/06/YT-Durk-e1529690906411-749x561.jpg)
-		center center;
+	margin: 0 0;
+	background: url(/img/thugger-bg.jpg) center center;
 	background-size: cover;
 	background-color: #134315;
 	background-blend-mode: multiply;
 	box-shadow: 20px 20px 30px #2a672b;
-	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  	height: calc(var(--vh, 1vh) * 100);
-	/* FLex Shtuff */
+	font-family: sans-serif;
+	color: #fff;
+}
+
+.wrapper {
+	max-width: 1170px;
+	padding: 2em 0;
+	margin: 0 auto;
+	min-height: 100vh;
+	/* flexy Stuff */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.wrapper > * {
-	order: 9999;
-}
-
-/* Header */
-.header {
+.wrapper header .heading {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	padding-bottom:5rem;
-}
-
-.heading {
-	display: flex;
-	align-items: center;
-}
-
-.heading span {
-	font-size: 60px;
-	padding: 15px;
-}
-
-.heading h1 {
-	display: flex;
 	text-align: center;
 }
 
-.header h1 {
-	font-size: 10rem;
-	margin: 0;
-	font-family: 'Yellowtail', cursive;
-	color: white;
-	letter-spacing: 0.5rem;
+.wrapper header .emojis {
+	font-size: 2em;
+	margin: 0 0.3em;
+	opacity: 0.65;
+}
 
+.wrapper header .heading h1 {
+	font-family: 'Lemon', cursive;
+	margin: 0;
+	letter-spacing: 1px;
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #6efd70b2;
 }
 
-.header p.instructions {
+.wrapper header .instructions {
 	font-family: 'Kite One', sans-serif;
-	color: #fff;
-	font-size: 2rem;
+	text-align: center;
+	font-size: 0.85em;
 }
 
-@media only screen and (max-width: 768px) {
-	.header h1 {
-		font-size: 5rem;
-	}
-}
-
-/* Content Section */
-
-.content .keys {
+/* Content Flex Layout */
+.wrapper .content .keys {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 1em;
 }
 
-.content .key {
-	border: 0.4rem solid #082509;
-	border-radius: 0.5rem;
-	font-size: 1.5rem;
+.wrapper .content .keys .key {
+	flex: 1 0 25%;
+}
+
+/* Content Style Section */
+.wrapper .content .keys .key {
+	border: 0.25em solid #082509;
+	border-radius: 0.5em;
+	font-size: 0.85em;
 	padding: 1rem 0.5rem;
 	transition: all 0.07s ease;
-	text-align: center;
+	margin: 0.25em;
 	color: white;
 	background: rgba(0, 0, 0, 0.4);
-	text-shadow: 0 0 0.5rem black;
-	margin: 5px;
+	text-shadow: 0 0 0.5em black;
 	cursor: pointer;
-	/* FLex Shtuff */
-	flex: 1 1 calc(20% - 10px);
 }
 
-.content .playing {
+.wrapper .content .keys .playing {
 	transform: scale(1.1);
 	border-color: #6efd70;
-	box-shadow: 0 0 1rem #6efd70;
+	box-shadow: 0 0 1em #6efd70;
 }
 
-.content kbd {
+.wrapper .content .keys kbd {
 	display: block;
-	font-size: 4rem;
+	font-size: 3.25em;
 }
 
-.content .sound {
-	font-size: 1.2rem;
+.wrapper .content .keys .sound-label {
+	font-size: 0.6em;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	color: #91ffbd;
-}
-
-@media only screen and (max-width: 768px) {
-	.content .sound {
-		font-size: 1rem;
-
-		letter-spacing: 0rem;
-	}
 }
 
 /* Young Thug Image + Animation */
@@ -141,24 +107,15 @@ body {
 	bottom: 0;
 	left: -300px;
 	transition: all 0.07s ease-in-out;
-	width: 250px;
-}
-
-@media only screen and (max-width: 768px) {
-	.thuggy {
-		width: 200px;
-	}
+	width: 200px;
 }
 
 .activate-thuggy {
-	animation-name: movingThug;
+	animation-name: activated-thuggy;
 	animation-duration: 1300ms;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	transform: translate(300px);
 }
 
-@keyframes movingThug {
+@keyframes activated-thuggy {
 	0% {
 		transform: translate(0, 0);
 		opacity: 0.1;
@@ -173,4 +130,29 @@ body {
 		transform: translate(0, 0);
 		opacity: 0.2;
 	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 550px) {
+	.wrapper header .heading h1 {
+		font-size: 3.5em;
+	}
+	.wrapper header .instructions {
+		font-size: 1.25em;
+	}
+
+	.wrapper header .emojis {
+		font-size: 4em;
+	}
+
+	.wrapper .content .keys .key {
+		flex: 1 0 20%;
+	}
+
+	.thuggy {
+		width: 250px;
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 850px) {
 }
