@@ -71,7 +71,8 @@ body {
 }
 .wrapper .socials a {
   font-family: 'Kite One', sans-serif;
-	border-color: #6efd70b2;
+  border-color: #6efd70b2;
+  padding: 5px 10px;
 	background: linear-gradient(to top, #6efd70b2 50%, #0000 50%) left top;
 	background-size: 100% 200%;
 	text-decoration: none;
