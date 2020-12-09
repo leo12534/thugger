@@ -10,10 +10,10 @@ html {
 html,
 body,
 .wrapper {
-  min-height: 100%;
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
+	min-height: 100%;
+	min-height: -moz-available;
+	min-height: -webkit-fill-available;
+	min-height: fill-available;
 }
 
 body {
@@ -178,14 +178,18 @@ body {
 		font-size: 4em;
 	}
 
-
-
 	.thuggy {
 		width: 250px;
 	}
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 850px) {
+	html,
+	body,
+	.wrapper {
+		min-height: 100vh;
+	}
+
 	.wrapper .content .keys .key {
 		flex: 1 0 20%;
 	}
