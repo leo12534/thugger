@@ -1,10 +1,6 @@
 const thuggy = document.querySelector('.thuggy');
 const keys = document.querySelectorAll('.key');
 
-function setDocHeight() {
-    document.documentElement.style.setProperty('--vh', `${window.innerHeight / 100}px`);
-}
-
 function playAdlib(audio) {
     if (!audio) return;
     audio.currentTime = 0;
@@ -43,7 +39,5 @@ function playAudio(e) {
     activateThuggy();
 }
 
-window.addEventListener('resize', setDocHeight);
-window.addEventListener('orientationchange', setDocHeight);
 window.addEventListener('keydown', playAudio);
 keys.forEach((key) => key.addEventListener('click', playAudio));
