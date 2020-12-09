@@ -59,8 +59,8 @@ body {
 .wrapper header .instructions {
 	font-family: 'Kite One', sans-serif;
 	text-align: center;
-  font-size: 0.85em;
-  letter-spacing: -.5px;
+	letter-spacing: -0.5px;
+	padding: 0 10px;
 }
 
 .wrapper header .instructions a {
@@ -70,8 +70,8 @@ body {
 	text-decoration: none;
 	color: #6efd70b2;
 	padding: 0 10px;
-  border-radius: 0.15em;
-  font-weight:900;
+	border-radius: 0.15em;
+	font-weight: 900;
 	transition: all 200ms ease-out;
 }
 
@@ -98,20 +98,19 @@ body {
 .wrapper .content .keys .key {
 	border: 0.25em solid #082509;
 	border-radius: 0.5em;
-	font-size: 0.85em;
+	font-size: 1.2em;
 	padding: 1rem 0.5rem;
 	transition: all 0.07s ease;
-	margin: 0.25em;
+	margin: 0.3em;
 	color: white;
 	background: rgba(0, 0, 0, 0.4);
 	text-shadow: 0 0 0.5em black;
-  cursor: pointer;
-  transition: all 200ms ease-out;
+	cursor: pointer;
+	transition: all 200ms ease-out;
 }
 
 .wrapper .content .keys .key:hover {
-  border: 0.25em solid #1fcc25;
-
+	border: 0.25em solid #1fcc25;
 }
 
 .wrapper .content .keys .playing {
@@ -122,11 +121,11 @@ body {
 
 .wrapper .content .keys kbd {
 	display: block;
-	font-size: 3.25em;
+	font-size: 1.5em;
 }
 
 .wrapper .content .keys .sound-label {
-	font-size: 0.6em;
+	font-size: 0.65em;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
@@ -177,9 +176,7 @@ body {
 		font-size: 4em;
 	}
 
-	.wrapper .content .keys .sound-label {
-		font-size: 0.85em;
-	}
+
 
 	.thuggy {
 		width: 250px;
@@ -189,5 +186,13 @@ body {
 @media (min-width: 850px) {
 	.wrapper .content .keys .key {
 		flex: 1 0 20%;
+	}
+
+	.wrapper .content .keys .key {
+		font-size: 0.85em;
+	}
+
+	.wrapper .content .keys kbd {
+		font-size: 3.25em;
 	}
 }
