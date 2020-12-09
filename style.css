@@ -37,7 +37,7 @@ body {
 
 .wrapper .socials {
 	text-align: right;
-	margin-bottom: 2em;
+	margin: 2em 0;
 }
 .wrapper .socials a {
 	font-family: 'Kite One', sans-serif;
