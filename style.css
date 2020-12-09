@@ -28,12 +28,30 @@ body {
 
 .wrapper {
 	max-width: 1170px;
-	padding: 2em 0;
 	margin: 0 auto;
 	/* flexy Stuff */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.wrapper .socials {
+	text-align: right;
+	margin-bottom: 2em;
+}
+.wrapper .socials a {
+	font-family: 'Kite One', sans-serif;
+	border: 2px solid transparent;
+	text-decoration: none;
+	color: #1fcc25;
+	padding: 10px 15px;
+	transition: all 200ms ease-out;
+}
+
+.wrapper .socials a:hover {
+	color: #1fcc25;
+	border-radius: 0.25em;
+	border: 2px solid #1fcc25;
 }
 
 .wrapper header .heading {
@@ -46,7 +64,7 @@ body {
 .wrapper header .emojis {
 	font-size: 2em;
 	margin: 0 0.3em;
-	opacity: 0.65;
+	opacity: 0.5;
 }
 
 .wrapper header .heading h1 {
@@ -63,28 +81,6 @@ body {
 	text-align: center;
 	letter-spacing: -0.5px;
 	padding: 0 10px;
-}
-
-.wrapper .socials {
-  text-align:right;
-  margin-bottom:1em;
-}
-.wrapper .socials a {
-  font-family: 'Kite One', sans-serif;
-  border-color: #6efd70b2;
-  padding: 5px 10px;
-	background: linear-gradient(to top, #6efd70b2 50%, #0000 50%) left top;
-	background-size: 100% 200%;
-	text-decoration: none;
-	color: #b8ffbab2;
-	border-radius: 0.15em;
-	transition: all 200ms ease-out;
-}
-
-.wrapper .socials a:hover {
-	color: #fff;
-	text-decoration: none;
-	background-position: left bottom;
 }
 
 /* Content Flex Layout */
