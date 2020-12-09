@@ -65,22 +65,24 @@ body {
 	padding: 0 10px;
 }
 
-.wrapper header .instructions a {
+.wrapper .socials {
+  text-align:right;
+  margin-bottom:1em;
+}
+.wrapper .socials a {
+  font-family: 'Kite One', sans-serif;
 	border-color: #6efd70b2;
 	background: linear-gradient(to top, #6efd70b2 50%, #0000 50%) left top;
 	background-size: 100% 200%;
 	text-decoration: none;
-	color: #6efd70b2;
-	padding: 0 10px;
+	color: #b8ffbab2;
 	border-radius: 0.15em;
-	font-weight: 900;
 	transition: all 200ms ease-out;
 }
 
-.wrapper header .instructions a:hover {
+.wrapper .socials a:hover {
 	color: #fff;
 	text-decoration: none;
-	padding: 0 10px;
 	background-position: left bottom;
 }
 
