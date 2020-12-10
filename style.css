@@ -134,6 +134,25 @@ body {
 	color: #91ffbd;
 }
 
+/* Thuggy on Hover */
+.wrapper .content .keys .key {position:relative;  }
+.wrapper .content .keys .key:after {
+	position:absolute;
+	content:'';
+	background-image:url('img/yt-1a.png');
+	width:105px;
+	height:97px;
+	top:0;
+	left:0;
+	opacity:0;
+	transition: all .2s ease-in-out;
+}
+
+.wrapper .content .keys .key:hover::after {
+    transform: translate(0px, -100px);
+    opacity:1;
+}
+
 /* Young Thug Image + Animation */
 .thuggy {
 	position: absolute;
