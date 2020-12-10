@@ -7,6 +7,17 @@ html {
 	box-sizing: inherit;
 }
 
+a {
+  color:#1fcc25;
+  text-decoration: none;
+  transition: all 200ms ease-out;
+}
+a:hover {
+  color:#106b13;
+  border-bottom:2px dotted #106b13;
+
+}
+
 html,
 body,
 .wrapper {
@@ -80,7 +91,6 @@ body {
 .wrapper header .instructions {
 	font-family: 'Kite One', sans-serif;
 	text-align: center;
-	letter-spacing: -0.5px;
 	padding: 0 10px;
 }
 
