@@ -17,6 +17,7 @@ body,
 }
 
 body {
+  position:relative;
 	margin: 0 0;
 	background: url(./img/thugger-bg.jpg) center center;
 	background-size: cover;
@@ -97,7 +98,7 @@ body {
 
 /* Content Style Section */
 .wrapper .content .keys .key {
-	border: 0.25em solid #082509;
+	border: 0.25em solid #0c480e;
 	border-radius: 0.5em;
 	font-size: 1.2em;
 	padding: 1rem 0.5rem;
