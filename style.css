@@ -153,37 +153,6 @@ body {
     opacity:1;
 }
 
-/* Young Thug Image + Animation */
-.thuggy {
-	position: absolute;
-	bottom: 0;
-	left: -300px;
-	transition: all 0.07s ease-in-out;
-	width: 200px;
-}
-
-.activate-thuggy {
-	animation-name: activated-thuggy;
-	animation-duration: 1300ms;
-}
-
-@keyframes activated-thuggy {
-	0% {
-		transform: translate(0, 0);
-		opacity: 0.1;
-	}
-
-	50% {
-		transform: translate(300px, 0px);
-		opacity: 0.8;
-	}
-
-	100% {
-		transform: translate(0, 0);
-		opacity: 0.2;
-	}
-}
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) {
 	.wrapper header .heading h1 {

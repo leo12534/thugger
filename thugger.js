@@ -1,4 +1,3 @@
-const thuggy = document.querySelector('.thuggy');
 const keys = document.querySelectorAll('.key');
 
 function playAdlib(audio) {
@@ -6,12 +5,7 @@ function playAdlib(audio) {
     audio.currentTime = 0;
     audio.play();
 }
-function activateThuggy() {
-    thuggy.classList.add('activate-thuggy');
-    setTimeout(() => {
-        thuggy.classList.remove('activate-thuggy');
-    }, 1000);
-}
+
 function addRemoveBorder(key) {
     key.classList.add('playing');
     keys.forEach((key) =>
@@ -36,7 +30,6 @@ function playAudio(e) {
     if (!currentKey) return;
     playAdlib(audio);
     addRemoveBorder(currentKey);
-    activateThuggy();
 }
 
 window.addEventListener('keydown', playAudio);
