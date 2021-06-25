@@ -2,7 +2,7 @@
   "name": "thugger",
   "version": "1.0.0",
   "description": "<p>One day i decided i needed to have some of my favorite Young Thug Adlibs handy on the go and on that day the idea for this was born</p>",
-  "main": "thugger.js",
+  "main": "src/thugger.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
