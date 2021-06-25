@@ -25,12 +25,13 @@ body,
 	min-height: -moz-available;
 	min-height: -webkit-fill-available;
 	min-height: fill-available;
+
 }
 
 body {
   position:relative;
 	margin: 0 0;
-	background: url(./img/thugger-bg.jpg) center center;
+	background: url(/src/img/thugger-bg.jpg) center center;
 	background-size: cover;
 	background-color: #134315;
 	background-blend-mode: multiply;
@@ -45,6 +46,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
 }
 
 .wrapper .socials {
@@ -149,7 +151,7 @@ body {
 .wrapper .content .keys .key:after {
 	position:absolute;
 	content:'';
-	background-image:url('img/yt-1a.png');
+	background-image:url('/src/img/yt-1a.png');
 	width:105px;
 	height:97px;
 	top:0;
