@@ -31,7 +31,7 @@ body,
 body {
   position:relative;
 	margin: 0 0;
-	background: url(/docs/img/thugger-bg.jpg) center center;
+	background: url(/img/thugger-bg.jpg) center center;
 	background-size: cover;
 	background-color: #134315;
 	background-blend-mode: multiply;
@@ -151,7 +151,7 @@ body {
 .wrapper .content .keys .key:after {
 	position:absolute;
 	content:'';
-	background-image:url('/docs/img/yt-1a.png');
+	background-image:url('/img/yt-1a.png');
 	width:105px;
 	height:97px;
 	top:0;
