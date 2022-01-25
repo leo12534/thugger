@@ -1,6 +1,6 @@
-const keys = document.querySelectorAll('.key');
+const keys = document.querySelectorAll('.content__keys-item');
 
-function playAudio(e) {
+const playAudio = function (e) {
     let keyCode; // Variable to store keyCode, depending on click or keydown
     if (e.type === 'click') {
         keyCode = e.currentTarget.dataset.key;
@@ -8,21 +8,21 @@ function playAudio(e) {
         keyCode = e.keyCode;
     }
 
-    const currentKey = document.querySelector(`.key[data-key="${keyCode}"]`);
+    const currentKey = document.querySelector(`.content__keys-item[data-key="${keyCode}"]`);
     const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
 
     if (!currentKey) return;
     playAdlib(audio);
     addRemoveBorder(currentKey);
-}
+};
 
-function playAdlib(audio) {
+const playAdlib = function (audio) {
     if (!audio) return;
     audio.currentTime = 0;
     audio.play();
-}
+};
 
-function addRemoveBorder(key) {
+const addRemoveBorder = function (key) {
     key.classList.add('playing');
     keys.forEach((key) =>
         key.addEventListener('transitionend', function (e) {
@@ -30,8 +30,7 @@ function addRemoveBorder(key) {
             key.classList.remove('playing');
         })
     );
-    console.log(key);
-}
+};
 
 window.addEventListener('keydown', playAudio);
 keys.forEach((key) => key.addEventListener('click', playAudio));
